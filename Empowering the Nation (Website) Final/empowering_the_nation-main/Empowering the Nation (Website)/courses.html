@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Courses - Empowering the Nation</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #00609e;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .search-bar {
+            margin: 15px 0;
+        }
+
+        .search-bar input {
+            padding: 5px;
+            width: 200px;
+        }
+
+        .search-bar button {
+            padding: 5px 10px;
+        }
+
+        .hero {
+            background-color: #60bcef;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .tab {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #757575;
+            color: white;
+            border: none;
+            margin: 5px 0;
+            width: 100%;
+            text-align: left;
+        }
+
+        .course-details {
+            display: none; /* Hide all course details by default */
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .active {
+            display: block; /* Show the active course details */
+        }
+
+        .course-image {
+            width: 300px; /* Set a fixed width */
+            height: 200px; /* Set a fixed height */
+            object-fit: cover; /* Ensure the image covers the area without distortion */
+        }
+
+        h1 {
+            font-size: 24px; /* Adjust size if needed */
+            margin: 0;
+        }
+
+        h2 {
+            font-size: 20px; /* Adjust size if needed */
+            margin: 0;
+        }
+
+        h3 {
+            font-size: 18px; /* Adjust size if needed */
+            margin: 0;
+        }
+    </style>
+    <script>
+        function showCourse(courseId) {
+            // Hide all course details
+            const courses = document.querySelectorAll('.course-details');
+            courses.forEach(course => {
+                course.classList.remove('active');
+            });
+
+            // Show the selected course details
+            document.getElementById(courseId).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo">
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button type="submit">Search</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Courses</h1>
+    </section>
+
+    <!-- Main content for all courses -->
+    <main class="content">
+        <!-- Course Tabs -->
+        <button class="tab" onclick="showCourse('first-aid')">First Aid</button>
+        <button class="tab" onclick="showCourse('landscaping')">Landscaping</button>
+        <button class="tab" onclick="showCourse('lifeskills')">Lifeskills</button>
+        <button class="tab" onclick="showCourse('sewing')">Sewing</button>
+        <button class="tab" onclick="showCourse('child-minding')">Child Minding</button>
+        <button class="tab" onclick="showCourse('cooking')">Cooking</button>
+        <button class="tab" onclick="showCourse('garden-maintenance')">Garden Maintenance</button> <!-- Added Garden Maintenance tab -->
+
+        <!-- Course Sections -->
+        <section id="first-aid" class="course-details">
+            <img src="assets/first aid.jpg" alt="First Aid Course" class="course-image">
+            <h2>First Aid</h2>
+            <p>Learn how to administer first aid and provide basic life support skills.</p>
+            <h3>Course Details</h3>
+            <p><strong>Fees:</strong> R1500</p>
+            <p><strong>Purpose:</strong> To provide first aid awareness and basic life support.</p>
+            <h4>Course Content:</h4>
+            <ul>
+                <li>Wounds and bleeding</li>
+                <li>Burns and fractures</li>
+                <li>Emergency scene management</li>
+                <li>Cardio-Pulmonary Resuscitation (CPR)</li>
+                <li>Respiratory distress (e.g., choking, blocked airway)</li>
+            </ul>
+        </section>
+    
+        <section id="landscaping" class="course-details">
+            <img src="assets/landscaping.jpg" alt="Landscaping Course" class="course-image">
+            <h2>Landscaping</h2>
+            <p>Learn landscaping services for gardens.</p>
+            <h3>Course Details</h3>
+            <p><strong>Fees:</strong> R1500</p>
+            <p><strong>Purpose:</strong> To provide landscaping services for new and established gardens.</p>
+            <h4>Course Content:</h4>
+            <ul>
+                <li>Indigenous and exotic plants and trees</li>
+                <li>Fixed structures (fountains, statues, benches, etc.)</li>
+                <li>Garden layout and planning</li>
+            </ul>
+        </section>
+    
+        <section id="lifeskills" class="course-details">
+            <img src="assets/lifeskills.jpg" alt="Lifeskills Course" class="course-image">
+            <h2>Lifeskills</h2>
+            <p>Learn basic life necessities to navigate daily tasks.</p>
+            <h3>Course Details</h3>
+            <p><strong>Fees:</strong> R1500</p>
+            <p><strong>Purpose:</strong> To provide skills to navigate basic life necessities.</p>
+            <h4>Course Content:</h4>
+            <ul>
+                <li>Opening a bank account</li>
+                <li>Basic labor law (know your rights)</li>
+                <li>Basic reading and writing literacy</li>
+                <li>Basic numeric literacy</li>
+            </ul>
+        </section>
+    
+        <section id="sewing" class="course-details">
+            <img src="assets/sewing.jpg" alt="Sewing Course" class="course-image">
+            <h2>Sewing</h2>
+            <p>Learn alterations and new garment tailoring services.</p>
+            <h3>Course Details</h3>
+            <p><strong>Fees:</strong> R1500</p>
+            <p><strong>Purpose:</strong> To provide alterations and new garment tailoring services.</p>
+            <h4>Course Content:</h4>
+            <ul>
+                <li>Types of stitches</li>
+                <li>Threading a sewing machine</li>
+                <li>Sewing buttons, zips, hems, and seams</li>
+                <li>Alterations</li>
+                <li>Designing and sewing new garments</li>
+            </ul>
+        </section>
+    
+        <section id="child-minding" class="course-details">
+            <img src="assets/child minding.jpg" alt="Child Minding Course" class="course-image">
+            <h2>Child Minding</h2>
+            <p>Learn the basics of child and baby care.</p>
+            <h3>Course Details</h3>
+            <p><strong>Fees:</strong> R750</p>
+            <p><strong>Purpose:</strong> To provide basic child and baby care.</p>
+            <h4>Course Content:</h4>
+            <ul>
+                <li>Birth to six-month-old baby needs</li>
+                <li>Seven-month to one-year-old needs</li>
+                <li>Toddler needs</li>
+                <li>Educational toys</li>
+            </ul>
+        </section>
+    
+        <section id="cooking" class="course-details">
+            <img src="assets/cooking.jpg" alt="Cooking Course" class="course-image">
+            <h2>Cooking</h2>
+            <p>Learn how to prepare and cook nutritious family meals.</p>
+            <h3>Course Details</h3>
+            <p><strong>Fees:</strong> R1500</p>
+            <p><strong>Purpose:</strong> To provide cooking skills for preparing nutritious meals.</p>
+            <h4>Course Content:</h4>
+            <ul>
+                <li>Basic cooking skills</li>
+                <li>Meal planning</li>
+                <li>Nutrition basics</li>
+                <li>Food safety and hygiene</li>
+            </ul>
+        </section>
+
+        <section id="garden-maintenance" class="course-details"> <!-- New Garden Maintenance Section -->
+            <img src="assets/garden maintenance.jpg" alt="Garden Maintenance Course" class="course-image">
+            <h2>Garden Maintenance</h2>
+            <p>Learn essential gardening techniques to maintain and enhance gardens.</p>
+            <h3>Course Details</h3>
+            <p><strong>Fees:</strong> R750</p>
+            <p><strong>Purpose:</strong> To equip individuals with the skills needed for effective garden maintenance.</p>
+            <h4>Course Content:</h4>
+            <ul>
+                <li>Weeding and mulching</li>
+                <li>Plant care and pest management</li>
+                <li>Seasonal planting and garden planning</li>
+                <li>Basic landscaping techniques</li>
+            </ul>
+        </section>
+
+    </main>
+
+      <!-- Footer section with site links and copyright notice -->
+      <footer>
+        <!-- Footer links for Privacy Policy and Terms of Service -->
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms of Service</a>
+        </div>
+        
+        <!-- Organization's copyright information -->
+        <p>&copy; 2024 Empowering the Nation. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

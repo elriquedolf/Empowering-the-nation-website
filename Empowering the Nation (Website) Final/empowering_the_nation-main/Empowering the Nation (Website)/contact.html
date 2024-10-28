@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo">
+        
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search...">
+            <button type="submit">Search</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Contact Us</h1>
+    </section>
+
+    <div class="content-wrapper">
+        <!-- Venue Dropdown Selection -->
+        <section class="contact-section">
+            <label for="venue-select">Select Venue:</label>
+            <select id="venue-select" onchange="showVenueInfo()">
+                <option value="">Choose a venue...</option>
+                <option value="venue1">Venue 1 - Braamfontein 222 Smit Street.Johannesburg,2000</option>
+                <option value="venue2">Venue 2 - 169 Oxford Road.Johannesburg,2196</option>
+                <option value="venue3">Venue 3 - Bedfordview AMR 3 Office Park.Johannesburg,2008</option>
+            </select>
+        </section>
+    
+        <!-- Venue Information -->
+        <section class="contact-section">
+            <div id="venue1-info" style="display:none;">
+                <p><strong>Venue 1 - Braamfontein 222 Smit Street.Johannesburg,2000</strong></p>
+                <p>Phone: 012 067 4488</p>
+                <p>Email: empoweringthenation@gmail.com</p>
+                <p>Address: 222 Smit Street, Johannesburg</p>
+                <iframe src="https://www.google.com/maps/embed?...Venue1Coordinates..." class="map" allowfullscreen></iframe>
+            </div>
+          
+            <div id="venue2-info" style="display:none;">
+                <p><strong>Venue 2 - 169 Oxford Road.Johannesburg,2196</strong></p>
+                <p>Phone: 012 067 4488</p>
+                <p>Email: empoweringthenation@gmail.com</p>
+                <p>Address: 169 Oxford Road, Johannesburg</p>
+                <iframe src="https://www.google.com/maps/embed?...Venue2Coordinates..." class="map" allowfullscreen></iframe>
+            </div>
+          
+            <div id="venue3-info" style="display:none;">
+                <p><strong>Venue 3 - Bedfordview AMR 3 Office Park.Johannesburg,2008</strong></p>
+                <p>Phone: 012 067 4488</p>
+                <p>Email: empoweringthenation@gmail.com</p>
+                <p>Address: AMR 3 office park, Johannesburg</p>
+                <iframe src="https://www.google.com/maps/embed?...Venue3Coordinates..." class="map" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <main>
+            <h1>Contact Us</h1>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+
+            <script>
+                function showVenueInfo() {
+                    // Hide all venue info divs
+                    document.getElementById('venue1-info').style.display = 'none';
+                    document.getElementById('venue2-info').style.display = 'none';
+                    document.getElementById('venue3-info').style.display = 'none';
+                    
+                    // Show selected venue info
+                    const selectedVenue = document.getElementById('venue-select').value;
+                    if (selectedVenue) {
+                        document.getElementById(selectedVenue + '-info').style.display = 'block';
+                    }
+                }
+            </script>
+
+            <!-- FAQ Section -->
+            <section class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <h3>1. What types of courses do you offer?</h3>
+                    <p>We offer a variety of courses in leadership, personal development, and vocational skills to empower individuals.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>2. How can I register for a course?</h3>
+                    <p>You can register for a course through our website by filling out the registration form or contacting us directly.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>3. What are the payment options available?</h3>
+                    <p>We accept various payment options including credit/debit cards, bank transfers, and cash payments at our venues.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>4. Do you offer any discounts?</h3>
+                    <p>Yes, we offer discounts for early registrations and group bookings. Please contact us for more details.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>5. What is your refund policy?</h3>
+                    <p>Our refund policy allows for full refunds if cancellations are made at least 7 days before the course starts. Please refer to our website for more information.</p>
+                </div>
+            </section>
+
+            <!-- Fee Calculator Section -->
+<section class="fee-calculator">
+    <h2>Fee Calculator</h2>
+    <label>Select courses:</label>
+    <div>
+        <input type="checkbox" class="course-checkbox" value="1500" onchange="calculateFee()"> First Aid - R1500<br>
+        <input type="checkbox" class="course-checkbox" value="1500" onchange="calculateFee()"> Landscaping - R1500<br>
+        <input type="checkbox" class="course-checkbox" value="1500" onchange="calculateFee()"> Lifeskills - R1500<br>
+        <input type="checkbox" class="course-checkbox" value="1500" onchange="calculateFee()"> Sewing - R1500<br>
+        <input type="checkbox" class="course-checkbox" value="750" onchange="calculateFee()"> Child Minding - R750<br>
+        <input type="checkbox" class="course-checkbox" value="750" onchange="calculateFee()"> Cooking - R750<br>
+        <input type="checkbox" class="course-checkbox" value="750" onchange="calculateFee()"> Garden Maintenance - R750<br>
+    </div>
+
+    <h3>Total Fee: R<span id="total-fee">0</span></h3>
+</section>
+
+<!-- JavaScript -->
+<script>
+    function calculateFee() {
+        const checkboxes = document.querySelectorAll('.course-checkbox');
+        let totalFee = 0;
+
+        // Loop through all checkboxes and add the values of checked ones
+        checkboxes.forEach((checkbox) => {
+            if (checkbox.checked) {
+                totalFee += parseInt(checkbox.value);
+            }
+        });
+
+        // Update the total fee in the DOM
+        document.getElementById('total-fee').textContent = totalFee;
+    }
+</script>
+
+        </main>
+
+        <!-- Footer section with site links and copyright notice -->
+        <footer>
+            <!-- Footer links for Privacy Policy and Terms of Service -->
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a> | 
+                <a href="#">Terms of Service</a>
+            </div>
+            
+            <!-- Organization's copyright information -->
+            <p>&copy; 2024 Empowering the Nation. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
