@@ -1,3 +1,33 @@
+
+// Function to add selected courses to cart for registration
+function registerCourses() {
+    const selectedCourses = [];
+    document.querySelectorAll('.course-checkbox:checked').forEach((checkbox) => {
+        selectedCourses.push(checkbox.getAttribute('data-course'));
+    });
+
+    if (selectedCourses.length > 0) {
+        alert(`You have successfully registered for: ${selectedCourses.join(', ')}`);
+    } else {
+        alert('Please select at least one course to register.');
+    }
+}
+
+// Function to show selected course details
+function showCourse(courseId) {
+    // Hide all course details
+    const courses = document.querySelectorAll('.course-details');
+    courses.forEach(course => {
+        course.classList.remove('active');
+    });
+
+    // Show the selected course details
+    const selectedCourse = document.getElementById(courseId);
+    if (selectedCourse) {
+        selectedCourse.classList.add('active');
+    }
+}
+
 // Function to toggle the visibility of the chatbox
 function toggleChat() {
     var chatbox = document.getElementById('chatbox');

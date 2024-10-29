@@ -15,10 +15,10 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="about.html">About Us</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
 
@@ -125,40 +125,6 @@
                     <p>Our refund policy allows for full refunds if cancellations are made at least 7 days before the course starts. Please refer to our website for more information.</p>
                 </div>
             </section>
-
-            <!-- Fee Calculator Section -->
-<section class="fee-calculator">
-    <h2>Fee Calculator</h2>
-    <label>Select courses:</label>
-    <div>
-        <input type="checkbox" class="course-checkbox" value="1500" onchange="calculateFee()"> First Aid - R1500<br>
-        <input type="checkbox" class="course-checkbox" value="1500" onchange="calculateFee()"> Landscaping - R1500<br>
-        <input type="checkbox" class="course-checkbox" value="1500" onchange="calculateFee()"> Lifeskills - R1500<br>
-        <input type="checkbox" class="course-checkbox" value="1500" onchange="calculateFee()"> Sewing - R1500<br>
-        <input type="checkbox" class="course-checkbox" value="750" onchange="calculateFee()"> Child Minding - R750<br>
-        <input type="checkbox" class="course-checkbox" value="750" onchange="calculateFee()"> Cooking - R750<br>
-        <input type="checkbox" class="course-checkbox" value="750" onchange="calculateFee()"> Garden Maintenance - R750<br>
-    </div>
-
-    <h3>Total Fee: R<span id="total-fee">0</span></h3>
-</section>
-
-<!-- JavaScript -->
-<script>
-    function calculateFee() {
-        const checkboxes = document.querySelectorAll('.course-checkbox');
-        let totalFee = 0;
-
-        // Loop through all checkboxes and add the values of checked ones
-        checkboxes.forEach((checkbox) => {
-            if (checkbox.checked) {
-                totalFee += parseInt(checkbox.value);
-            }
-        });
-
-        // Update the total fee in the DOM
-        document.getElementById('total-fee').textContent = totalFee;
-    }
 </script>
 
         </main>
