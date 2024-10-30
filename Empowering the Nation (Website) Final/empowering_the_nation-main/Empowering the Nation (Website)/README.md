@@ -23,6 +23,10 @@ Images: For the hero section and course illustrations.
 /styles.css: The CSS file containing all the styles.
 /script.js: The JavaScript file controlling the chatbox and other functionalities.
 /assets/: Folder containing images, logos, and any other media resources used in the site.
+/courses.html: Contains the courses section of the website, and a calculate function.
+/gallery.html: Contains gallery images used within the courses.
+/about.html: Screen that gives more information about the NGO.
+/contact.html: Screen with contact details of business and function to get directions for 1 of 3 different venues.
 
 5. Installation
 
@@ -55,3 +59,25 @@ This project is currently not licensed. You do not have permission to copy, modi
 
 10. Contact
 For inquiries, please contact ST10434187@vcconnect.edu.za.
+
+11.
+Detailed report: file:///C:/Users/Tiaan/Downloads/Report%20on%20Empowering%20the%20Nation%20Website.pdf
+
+12. Reference List:
+
+Pixabay 2024. Available at https://pixabay.com
+https://pixabay.com/photos/first-aid-kit-first-aid-kit-medical-908591/
+https://pixabay.com/photos/tree-woodcutter-chainsaw-pruning-100589/
+https://pixabay.com/photos/sewing-sewing-machine-thimble-1896454/
+https://pixabay.com/photos/hands-pottery-pot-brown-wheel-mud-1284033/
+https://pixabay.com/photos/avocado-chopping-board-ingredients-1838785/
+https://pixabay.com/photos/lawn-mower-grass-garden-front-yard-384589/
+https://pixabay.com/photos/baby-care-sleeping-newborn-infant-20339/
+
+Stockcake 2024 available at https://stockcake.com
+
+ChatGPT at openAI 2024 available at https://chatgpt.comx
+
+
+
+
